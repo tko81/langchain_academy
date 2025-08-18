@@ -6,7 +6,7 @@ from langgraph.store.base import BaseStore
 import configuration
 
 # Initialize the LLM
-model = ChatTongyi(model="gpt-4o", temperature=0) 
+model = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0) 
 
 # Chatbot instruction
 MODEL_SYSTEM_MESSAGE = """You are a helpful assistant with memory that provides information about the user. 

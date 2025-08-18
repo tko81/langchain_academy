@@ -125,7 +125,7 @@ class UpdateMemory(TypedDict):
     update_type: Literal['user', 'todo', 'instructions']
 
 # Initialize the model
-model = ChatTongyi(model="gpt-4o", temperature=0)
+model = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0)
 
 ## Create the Trustcall extractors for updating the user profile and ToDo list
 profile_extractor = create_extractor(

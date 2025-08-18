@@ -13,7 +13,7 @@ from langgraph.store.base import BaseStore
 import configuration
 
 # Initialize the LLM
-model = ChatTongyi(model="gpt-4o", temperature=0) 
+model = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0) 
 
 # Memory schema
 class Memory(BaseModel):

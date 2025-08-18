@@ -14,7 +14,7 @@ def multiply(a: int, b: int) -> int:
     return a * b
 
 # LLM with bound tool
-llm = ChatTongyi(model="gpt-4o")
+llm = ChatTongyi(model="qwen3-coder-flash", streaming=True)
 llm_with_tools = llm.bind_tools([multiply])
 
 # Node

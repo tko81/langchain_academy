@@ -34,7 +34,7 @@ def divide(a: int, b: int) -> float:
 tools = [add, multiply, divide]
 
 # Define LLM with bound tools
-llm = ChatTongyi(model="gpt-4o")
+llm = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash")
 llm_with_tools = llm.bind_tools(tools)
 
 # System message
