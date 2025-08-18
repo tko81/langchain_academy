@@ -1,5 +1,7 @@
 from langchain_core.messages import SystemMessage
 from langchain_openai import ChatOpenAI
+from langchain_community.chat_models.tongyi import ChatTongyi
+from langchain_core.messages import HumanMessage
 
 from langgraph.graph import START, StateGraph, MessagesState
 from langgraph.prebuilt import tools_condition, ToolNode
@@ -34,7 +36,7 @@ def divide(a: int, b: int) -> float:
 tools = [add, multiply, divide]
 
 # Define LLM with bound tools
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatTongyi(streaming=True, model="qwen3-coder-flash", temperature=0)
 llm_with_tools = llm.bind_tools(tools)
 
 # System message
