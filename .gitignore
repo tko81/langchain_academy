@@ -1,6 +1,10 @@
 .ipynb_checkpoints/
 
 .idea/
+# LangGraph API folders
+*/.langgraph_api
+.langgraph_api/
+**/.langgraph_api/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
