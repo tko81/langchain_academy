@@ -1,6 +1,4 @@
-from langchain_openai import ChatOpenAI
 from langchain_community.chat_models.tongyi import ChatTongyi
-from langchain_core.messages import HumanMessage
 from langgraph.graph import MessagesState
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
@@ -16,7 +14,7 @@ def multiply(a: int, b: int) -> int:
     return a * b
 
 # LLM with bound tool
-llm = ChatTongyi(streaming=True, model="qwen3-coder-flash", temperature=0)
+llm = ChatTongyi(model="qwen3-coder-flash", streaming=True)
 llm_with_tools = llm.bind_tools([multiply])
 
 # Node
