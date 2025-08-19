@@ -5,7 +5,7 @@ from langgraph.graph import StateGraph, START, END
 
 # We will use this model for both the conversation and the summarization
 from langchain_community.chat_models.tongyi import ChatTongyi
-model = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0) 
+model = ChatTongyi(model="qwen3-coder-flash", temperature=0) 
 
 # State class to store messages and summary
 class State(MessagesState):
