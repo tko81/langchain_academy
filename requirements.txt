@@ -13,3 +13,4 @@ trustcall
 langgraph-cli[inmem]
 python-dotenv
 dashscope
+langgraph-api

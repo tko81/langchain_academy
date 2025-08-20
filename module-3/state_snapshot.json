@@ -1,0 +1,86 @@
+{
+  "values": {
+    "messages": [
+      {
+        "type": "human",
+        "content": "Multiply 2 and 3",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "id": "4c3f2f47-cb2e-4fb1-975e-a07bb8045688"
+      },
+      {
+        "type": "ai",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "function": {
+                "name": "multiply",
+                "arguments": "{\"a\": 2, \"b\": 3}"
+              },
+              "index": 0,
+              "id": "call_a0e9fcbd4acf4e13bed304f6",
+              "type": "function"
+            }
+          ]
+        },
+        "response_metadata": {
+          "model_name": "qwen3-coder-flash",
+          "finish_reason": "tool_calls",
+          "request_id": "011cf437-2ca1-993b-aff6-f45381635a1f",
+          "token_usage": {
+            "input_tokens": 501,
+            "output_tokens": 29,
+            "total_tokens": 530,
+            "cached_tokens": 0
+          }
+        },
+        "id": "run--9fae709e-f0ae-43d6-ac24-d0adeb8abfdb-0",
+        "tool_calls": [
+          {
+            "name": "multiply",
+            "args": {
+              "a": 2,
+              "b": 3
+            },
+            "id": "call_a0e9fcbd4acf4e13bed304f6",
+            "type": "tool_call"
+          }
+        ]
+      }
+    ]
+  },
+  "next": ["tools"],
+  "config": {
+    "configurable": {
+      "thread_id": "1",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f07db26-56e6-6291-8001-1ce852fb829c"
+    }
+  },
+  "metadata": {
+    "source": "loop",
+    "step": 1,
+    "parents": {}
+  },
+  "created_at": "2025-08-20T10:42:40.786872+00:00",
+  "parent_config": {
+    "configurable": {
+      "thread_id": "1",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f07db26-4ea1-65e7-8000-98d2926cc503"
+    }
+  },
+  "tasks": [
+    {
+      "id": "8b73742a-602e-763c-21b9-062a60cc2b6a",
+      "name": "tools",
+      "path": ["__pregel_pull", "tools"],
+      "error": null,
+      "interrupts": [],
+      "state": null,
+      "result": null
+    }
+  ],
+  "interrupts": []
+}

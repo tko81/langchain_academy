@@ -1,0 +1,258 @@
+{
+	"StreamPart": {
+		"event": "metadata",
+		"data": {
+			"run_id": "0198c65c-ce16-7170-9201-60eeefb59961",
+			"attempt": 1
+		}
+	},
+	"StreamPart": {
+		"event": "values",
+		"data": {
+			"messages": [
+				{
+					"content": "Multiply 2 and 3",
+					"additional_kwargs": {},
+					"response_metadata": {},
+					"type": "human",
+					"name": "None",
+					"id": "07d4b7f8-662a-40e3-9602-6468b3a19e6a",
+					"example": false
+				}
+			]
+		}
+	},
+	"StreamPart": {
+		"event": "values",
+		"data": {
+			"messages": [
+				{
+					"content": "Multiply 2 and 3",
+					"additional_kwargs": {},
+					"response_metadata": {},
+					"type": "human",
+					"name": "None",
+					"id": "07d4b7f8-662a-40e3-9602-6468b3a19e6a",
+					"example": false
+				},
+				{
+					"content": "",
+					"additional_kwargs": {
+						"tool_calls": [
+							{
+								"index": 0,
+								"id": "call_3932214b7cb948fcaf5a7de3",
+								"type": "function",
+								"function": {
+									"name": "multiply",
+									"arguments": {
+										"a": 2,
+										"b": 3
+									}
+								}
+							}
+						]
+					},
+					"response_metadata": {
+						"model_name": "qwen3-coder-flash",
+						"finish_reason": "tool_calls",
+						"request_id": "3e9bc4e1-23eb-9cfc-8dc5-00c07fabdfa4",
+						"token_usage": {
+							"input_tokens": 502,
+							"output_tokens": 29,
+							"total_tokens": 531,
+							"cached_tokens": 0
+						}
+					},
+					"type": "ai",
+					"name": "None",
+					"id": "run--55c59365-2c97-429d-b570-9356d055dab5-0",
+					"example": false,
+					"tool_calls": [
+						{
+							"name": "multiply",
+							"args": {
+								"a": 2,
+								"b": 3
+							},
+							"id": "call_3932214b7cb948fcaf5a7de3",
+							"type": "tool_call"
+						}
+					],
+					"invalid_tool_calls": [],
+					"usage_metadata": "None"
+				}
+			]
+		}
+	},
+	"StreamPart": {
+		"event": "values",
+		"data": {
+			"messages": [
+				{
+					"content": "Multiply 2 and 3",
+					"additional_kwargs": {},
+					"response_metadata": {},
+					"type": "human",
+					"name": "None",
+					"id": "07d4b7f8-662a-40e3-9602-6468b3a19e6a",
+					"example": false
+				},
+				{
+					"content": "",
+					"additional_kwargs": {
+						"tool_calls": [
+							{
+								"index": 0,
+								"id": "call_3932214b7cb948fcaf5a7de3",
+								"type": "function",
+								"function": {
+									"name": "multiply",
+									"arguments": {
+										"a": 2,
+										"b": 3
+									}
+								}
+							}
+						]
+					},
+					"response_metadata": {
+						"model_name": "qwen3-coder-flash",
+						"finish_reason": "tool_calls",
+						"request_id": "3e9bc4e1-23eb-9cfc-8dc5-00c07fabdfa4",
+						"token_usage": {
+							"input_tokens": 502,
+							"output_tokens": 29,
+							"total_tokens": 531,
+							"cached_tokens": 0
+						}
+					},
+					"type": "ai",
+					"name": "None",
+					"id": "run--55c59365-2c97-429d-b570-9356d055dab5-0",
+					"example": false,
+					"tool_calls": [
+						{
+							"name": "multiply",
+							"args": {
+								"a": 2,
+								"b": 3
+							},
+							"id": "call_3932214b7cb948fcaf5a7de3",
+							"type": "tool_call"
+						}
+					],
+					"invalid_tool_calls": [],
+					"usage_metadata": "None"
+				},
+				{
+					"content": "6",
+					"additional_kwargs": {},
+					"response_metadata": {},
+					"type": "tool",
+					"name": "multiply",
+					"id": "55dbdcbc-3902-4b3a-b292-63e370a9987e",
+					"tool_call_id": "call_3932214b7cb948fcaf5a7de3",
+					"artifact": "None",
+					"status": "success"
+				}
+			]
+		}
+	},
+	"StreamPart": {
+		"event": "values",
+		"data": {
+			"messages": [
+				{
+					"content": "Multiply 2 and 3",
+					"additional_kwargs": {},
+					"response_metadata": {},
+					"type": "human",
+					"name": "None",
+					"id": "07d4b7f8-662a-40e3-9602-6468b3a19e6a",
+					"example": false
+				},
+				{
+					"content": "",
+					"additional_kwargs": {
+						"tool_calls": [
+							{
+								"index": 0,
+								"id": "call_3932214b7cb948fcaf5a7de3",
+								"type": "function",
+								"function": {
+									"name": "multiply",
+									"arguments": {
+										"a": 2,
+										"b": 3
+									}
+								}
+							}
+						]
+					},
+					"response_metadata": {
+						"model_name": "qwen3-coder-flash",
+						"finish_reason": "tool_calls",
+						"request_id": "3e9bc4e1-23eb-9cfc-8dc5-00c07fabdfa4",
+						"token_usage": {
+							"input_tokens": 502,
+							"output_tokens": 29,
+							"total_tokens": 531,
+							"cached_tokens": 0
+						}
+					},
+					"type": "ai",
+					"name": "None",
+					"id": "run--55c59365-2c97-429d-b570-9356d055dab5-0",
+					"example": false,
+					"tool_calls": [
+						{
+							"name": "multiply",
+							"args": {
+								"a": 2,
+								"b": 3
+							},
+							"id": "call_3932214b7cb948fcaf5a7de3",
+							"type": "tool_call"
+						}
+					],
+					"invalid_tool_calls": [],
+					"usage_metadata": "None"
+				},
+				{
+					"content": "6",
+					"additional_kwargs": {},
+					"response_metadata": {},
+					"type": "tool",
+					"name": "multiply",
+					"id": "55dbdcbc-3902-4b3a-b292-63e370a9987e",
+					"tool_call_id": "call_3932214b7cb948fcaf5a7de3",
+					"artifact": "None",
+					"status": "success"
+				},
+				{
+					"content": "The result of multiplying 2 and 3 is 6.\n",
+					"additional_kwargs": {},
+					"response_metadata": {
+						"model_name": "qwen3-coder-flash",
+						"finish_reason": "stop",
+						"request_id": "9826bfcb-9b3b-9b16-ab68-763c853ea442",
+						"token_usage": {
+							"input_tokens": 547,
+							"output_tokens": 14,
+							"total_tokens": 561,
+							"cached_tokens": 256
+						}
+					},
+					"type": "ai",
+					"name": "None",
+					"id": "run--ed9e45f3-1d3f-434d-a4e4-b3df7d7d155d-0",
+					"example": false,
+					"tool_calls": [],
+					"invalid_tool_calls": [],
+					"usage_metadata": "None"
+				}
+			]
+		}
+	}
+}
