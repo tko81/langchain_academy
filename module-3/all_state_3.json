@@ -1,0 +1,87 @@
+{
+  "values": {
+    "messages": [
+      {
+        "content": "Multiply 7 and 7",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "id": "2d8ad369-554e-4063-855f-31a98334e5db"
+      }
+    ]
+  },
+  "next": ["assistant"],
+  "config": {
+    "configurable": {
+      "thread_id": "2",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f07e4fe-213e-6c07-8000-9186c3269746"
+    }
+  },
+  "metadata": {
+    "source": "loop",
+    "step": 0,
+    "parents": {}
+  },
+  "created_at": "2025-08-21T05:30:00.895789+00:00",
+  "parent_config": {
+    "configurable": {
+      "thread_id": "2",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f07e4fe-213d-67d4-bfff-dd4c2a938f7b"
+    }
+  },
+  "tasks": [
+    {
+      "id": "6af597fc-9060-2bd0-265b-41565c81baa6",
+      "name": "assistant",
+      "path": ["__pregel_pull", "assistant"],
+      "error": null,
+      "interrupts": [],
+      "state": null,
+      "result": {
+        "messages": [
+          {
+            "content": "",
+            "additional_kwargs": {
+              "tool_calls": [
+                {
+                  "function": {
+                    "name": "multiply",
+                    "arguments": "{\"a\": 7, \"b\": 7}"
+                  },
+                  "index": 0,
+                  "id": "call_e24e38c26e204133b1f88c7b",
+                  "type": "function"
+                }
+              ]
+            },
+            "response_metadata": {
+              "model_name": "qwen3-coder-flash",
+              "finish_reason": "tool_calls",
+              "request_id": "dde2f4af-5940-90d5-83be-e5b8ab46b820",
+              "token_usage": {
+                "input_tokens": 501,
+                "output_tokens": 29,
+                "total_tokens": 530,
+                "cached_tokens": 0
+              }
+            },
+            "id": "run--3d668daf-eae4-4b1c-9879-7d9f5836657d-0",
+            "tool_calls": [
+              {
+                "name": "multiply",
+                "args": {
+                  "a": 7,
+                  "b": 7
+                },
+                "id": "call_e24e38c26e204133b1f88c7b",
+                "type": "tool_call"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "interrupts": []
+}

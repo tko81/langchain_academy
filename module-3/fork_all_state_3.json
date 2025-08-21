@@ -19,7 +19,7 @@
                 "arguments": "{\"a\": 7, \"b\": 7}"
               },
               "index": 0,
-              "id": "call_e24e38c26e204133b1f88c7b",
+              "id": "call_99387a0014e94f3ca8b03d6a",
               "type": "function"
             }
           ]
@@ -27,7 +27,7 @@
         "response_metadata": {
           "model_name": "qwen3-coder-flash",
           "finish_reason": "tool_calls",
-          "request_id": "dde2f4af-5940-90d5-83be-e5b8ab46b820",
+          "request_id": "30cf1d41-2f17-903e-894e-718d3f74045a",
           "token_usage": {
             "input_tokens": 501,
             "output_tokens": 29,
@@ -35,7 +35,7 @@
             "cached_tokens": 0
           }
         },
-        "id": "run--3d668daf-eae4-4b1c-9879-7d9f5836657d-0",
+        "id": "run--3e415aa3-1a2d-48f7-b26f-fcfd507c62d5-0",
         "tool_calls": [
           {
             "name": "multiply",
@@ -43,58 +43,54 @@
               "a": 7,
               "b": 7
             },
-            "id": "call_e24e38c26e204133b1f88c7b",
+            "id": "call_99387a0014e94f3ca8b03d6a",
             "type": "tool_call"
           }
         ]
-      },
-      {
-        "type": "ToolMessage",
-        "content": "49",
-        "name": "multiply",
-        "id": "8a3aa52f-2354-408a-89b8-82e04fdc9b4f",
-        "tool_call_id": "call_e24e38c26e204133b1f88c7b"
-      },
-      {
-        "type": "AIMessage",
-        "content": "The result of multiplying 7 and 7 is 49.\n",
-        "additional_kwargs": {},
-        "response_metadata": {
-          "model_name": "qwen3-coder-flash",
-          "finish_reason": "stop",
-          "request_id": "cad0abe6-e666-9056-a13f-39040e5e2a87",
-          "token_usage": {
-            "input_tokens": 547,
-            "output_tokens": 15,
-            "total_tokens": 562,
-            "cached_tokens": 256
-          }
-        },
-        "id": "run--d0564ede-b5eb-4c72-aa25-c1298ba23e66-0"
       }
     ]
   },
-  "next": [],
+  "next": ["tools"],
   "config": {
     "configurable": {
       "thread_id": "2",
       "checkpoint_ns": "",
-      "checkpoint_id": "1f07e4fe-2eac-6f23-8003-208e433279b1"
+      "checkpoint_id": "1f07e531-9c24-662a-8001-196837051fee"
     }
   },
   "metadata": {
     "source": "loop",
-    "step": 3,
+    "step": 1,
     "parents": {}
   },
-  "created_at": "2025-08-21T05:30:02.304073+00:00",
+  "created_at": "2025-08-21T05:53:02.803300+00:00",
   "parent_config": {
     "configurable": {
       "thread_id": "2",
       "checkpoint_ns": "",
-      "checkpoint_id": "1f07e4fe-2a51-6edc-8002-d864b2869f15"
+      "checkpoint_id": "1f07e4fe-213e-6c07-8000-9186c3269746"
     }
   },
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "46a5a132-e1f7-b96c-9dca-70639859d4e0",
+      "name": "tools",
+      "path": ["__pregel_pull", "tools"],
+      "error": null,
+      "interrupts": [],
+      "state": null,
+      "result": {
+        "messages": [
+          {
+            "type": "ToolMessage",
+            "content": "49",
+            "name": "multiply",
+            "id": "9f6f92a5-1cb1-4e14-a60d-76a214b0013c",
+            "tool_call_id": "call_99387a0014e94f3ca8b03d6a"
+          }
+        ]
+      }
+    }
+  ],
   "interrupts": []
 }

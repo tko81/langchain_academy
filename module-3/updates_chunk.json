@@ -1,0 +1,83 @@
+{
+  "conversation": [
+    {
+      "role": "assistant",
+      "messages": [
+        {
+          "type": "AIMessage",
+          "content": "",
+          "additional_kwargs": {
+            "tool_calls": [
+              {
+                "function": {
+                  "name": "multiply",
+                  "arguments": "{\"a\": 7, \"b\": 7}"
+                },
+                "index": 0,
+                "id": "call_2f7f652d2240485eb13847d6",
+                "type": "function"
+              }
+            ]
+          },
+          "response_metadata": {
+            "model_name": "qwen3-coder-flash",
+            "finish_reason": "tool_calls",
+            "request_id": "910af1db-dbe0-9407-bc29-89924651b297",
+            "token_usage": {
+              "input_tokens": 501,
+              "output_tokens": 29,
+              "total_tokens": 530,
+              "cached_tokens": 0
+            }
+          },
+          "id": "run--4f0e776f-16da-459b-aa28-f68665a641ed-0",
+          "tool_calls": [
+            {
+              "name": "multiply",
+              "args": {
+                "a": 7,
+                "b": 7
+              },
+              "id": "call_2f7f652d2240485eb13847d6",
+              "type": "tool_call"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "role": "tools",
+      "messages": [
+        {
+          "type": "ToolMessage",
+          "content": "49",
+          "name": "multiply",
+          "id": "ad0f1938-1006-4728-8cb3-1170a96f24ac",
+          "tool_call_id": "call_2f7f652d2240485eb13847d6"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "messages": [
+        {
+          "type": "AIMessage",
+          "content": "The result of multiplying 7 and 7 is 49.\n",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "model_name": "qwen3-coder-flash",
+            "finish_reason": "stop",
+            "request_id": "e2e000b2-112c-9186-b712-4df581392add",
+            "token_usage": {
+              "input_tokens": 547,
+              "output_tokens": 15,
+              "total_tokens": 562,
+              "cached_tokens": 256
+            }
+          },
+          "id": "run--688de9c5-fab3-47a0-8cff-9edfb8fa55b0-0"
+        }
+      ]
+    }
+  ]
+}

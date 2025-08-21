@@ -1,0 +1,39 @@
+{
+  "values": {
+    "messages": []
+  },
+  "next": ["__start__"],
+  "config": {
+    "configurable": {
+      "thread_id": "2",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f07e4fe-213d-67d4-bfff-dd4c2a938f7b"
+    }
+  },
+  "metadata": {
+    "source": "input",
+    "step": -1,
+    "parents": {}
+  },
+  "created_at": "2025-08-21T05:30:00.895273+00:00",
+  "parent_config": null,
+  "tasks": [
+    {
+      "id": "6d774c24-053b-c88e-376d-62cfbfc6ed6b",
+      "name": "__start__",
+      "path": ["__pregel_pull", "__start__"],
+      "error": null,
+      "interrupts": [],
+      "state": null,
+      "result": {
+        "messages": {
+          "content": "Multiply 7 and 7",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "2d8ad369-554e-4063-855f-31a98334e5db"
+        }
+      }
+    }
+  ],
+  "interrupts": []
+}

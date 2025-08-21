@@ -1,4 +1,4 @@
-from langchain_core.messages import SystemMessage
+from langchain_core.messages import SystemMessage, ToolMessage, AIMessage
 from langchain_community.chat_models.tongyi import ChatTongyi
 
 from langgraph.graph import START, StateGraph, MessagesState

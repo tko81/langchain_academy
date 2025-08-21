@@ -54,47 +54,60 @@
         "name": "multiply",
         "id": "8a3aa52f-2354-408a-89b8-82e04fdc9b4f",
         "tool_call_id": "call_e24e38c26e204133b1f88c7b"
-      },
-      {
-        "type": "AIMessage",
-        "content": "The result of multiplying 7 and 7 is 49.\n",
-        "additional_kwargs": {},
-        "response_metadata": {
-          "model_name": "qwen3-coder-flash",
-          "finish_reason": "stop",
-          "request_id": "cad0abe6-e666-9056-a13f-39040e5e2a87",
-          "token_usage": {
-            "input_tokens": 547,
-            "output_tokens": 15,
-            "total_tokens": 562,
-            "cached_tokens": 256
-          }
-        },
-        "id": "run--d0564ede-b5eb-4c72-aa25-c1298ba23e66-0"
       }
     ]
   },
-  "next": [],
+  "next": ["assistant"],
   "config": {
-    "configurable": {
-      "thread_id": "2",
-      "checkpoint_ns": "",
-      "checkpoint_id": "1f07e4fe-2eac-6f23-8003-208e433279b1"
-    }
-  },
-  "metadata": {
-    "source": "loop",
-    "step": 3,
-    "parents": {}
-  },
-  "created_at": "2025-08-21T05:30:02.304073+00:00",
-  "parent_config": {
     "configurable": {
       "thread_id": "2",
       "checkpoint_ns": "",
       "checkpoint_id": "1f07e4fe-2a51-6edc-8002-d864b2869f15"
     }
   },
-  "tasks": [],
+  "metadata": {
+    "source": "loop",
+    "step": 2,
+    "parents": {}
+  },
+  "created_at": "2025-08-21T05:30:01.847363+00:00",
+  "parent_config": {
+    "configurable": {
+      "thread_id": "2",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f07e4fe-2a4d-6cc5-8001-f6981c5aed3d"
+    }
+  },
+  "tasks": [
+    {
+      "id": "c347f7ac-1fff-b9ec-ba20-98a76b0e86ca",
+      "name": "assistant",
+      "path": ["__pregel_pull", "assistant"],
+      "error": null,
+      "interrupts": [],
+      "state": null,
+      "result": {
+        "messages": [
+          {
+            "type": "AIMessage",
+            "content": "The result of multiplying 7 and 7 is 49.\n",
+            "additional_kwargs": {},
+            "response_metadata": {
+              "model_name": "qwen3-coder-flash",
+              "finish_reason": "stop",
+              "request_id": "cad0abe6-e666-9056-a13f-39040e5e2a87",
+              "token_usage": {
+                "input_tokens": 547,
+                "output_tokens": 15,
+                "total_tokens": 562,
+                "cached_tokens": 256
+              }
+            },
+            "id": "run--d0564ede-b5eb-4c72-aa25-c1298ba23e66-0"
+          }
+        ]
+      }
+    }
+  ],
   "interrupts": []
 }
