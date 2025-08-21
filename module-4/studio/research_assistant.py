@@ -13,7 +13,7 @@ from langgraph.graph import END, MessagesState, START, StateGraph
 
 ### LLM
 
-llm = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0) 
+llm = ChatTongyi(model="qwen3-coder-flash", temperature=0) 
 
 ### Schema 
 

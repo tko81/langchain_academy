@@ -12,7 +12,7 @@ from langchain_community.chat_models.tongyi import ChatTongyi
 
 from langgraph.graph import StateGraph, START, END
 
-llm = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0) 
+llm = ChatTongyi(model="qwen3-coder-flash", temperature=0) 
 
 class State(TypedDict):
     question: str
