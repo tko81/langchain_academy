@@ -1,0 +1,78 @@
+{
+  "messages": [
+    {
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_XcDhdeL4wRS1xfDjJv7mgxTd",
+            "function": {
+              "arguments": "{\"content\":\"User's name is Lance. This morning the user had a nice bike ride in San Francisco.\"}",
+              "name": "Memory"
+            },
+            "type": "function"
+          }
+        ],
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 233,
+          "prompt_tokens": 185,
+          "total_tokens": 418,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": 0,
+            "reasoning_tokens": 192,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          }
+        },
+        "model_name": "gpt-5-mini-2025-08-07",
+        "system_fingerprint": null,
+        "id": "chatcmpl-C8MBmFI1XBnNHugM40SYx9ICFjyRX",
+        "service_tier": null,
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "id": "run--46aefd21-b8b1-4cd7-ba9d-f557f6fa683b-0",
+      "tool_calls": [
+        {
+          "name": "Memory",
+          "args": {
+            "content": "User's name is Lance. This morning the user had a nice bike ride in San Francisco."
+          },
+          "id": "call_XcDhdeL4wRS1xfDjJv7mgxTd",
+          "type": "tool_call"
+        }
+      ],
+      "usage_metadata": {
+        "input_tokens": 185,
+        "output_tokens": 233,
+        "total_tokens": 418,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 192
+        }
+      }
+    }
+  ],
+  "responses": [
+    {
+      "content": "User's name is Lance. This morning the user had a nice bike ride in San Francisco."
+    }
+  ],
+  "response_metadata": [
+    {
+      "id": "call_XcDhdeL4wRS1xfDjJv7mgxTd"
+    }
+  ],
+  "attempts": 1
+}

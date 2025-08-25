@@ -1,0 +1,67 @@
+{
+  "messages": [
+    {
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_LgxUsCgHP1KHy0YffLNpJr5c",
+            "function": {
+              "arguments": "{\"user_name\":\"Lance\",\"interests\":[\"biking\",\"San Francisco\"]}",
+              "name": "UserProfile"
+            },
+            "type": "function",
+            "index": 0
+          }
+        ],
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 18,
+          "prompt_tokens": 116,
+          "total_tokens": 134,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model_name": "gpt-4o",
+        "system_fingerprint": "fp_ee1d74bde0",
+        "id": "chatcmpl-C8KkUIMDgbT0KkhdleuPGE4XQax30",
+        "service_tier": null,
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "id": "run--24671322-ccac-43d8-b10b-a881c9a8709b-0",
+      "tool_calls": [
+        {
+          "name": "UserProfile",
+          "args": {
+            "user_name": "Lance",
+            "interests": ["biking", "San Francisco"]
+          },
+          "id": "call_LgxUsCgHP1KHy0YffLNpJr5c",
+          "type": "tool_call"
+        }
+      ],
+      "usage_metadata": {
+        "input_tokens": 116,
+        "output_tokens": 18,
+        "total_tokens": 134,
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  ],
+  "responses": [
+    {
+      "user_name": "Lance",
+      "interests": ["biking", "San Francisco"]
+    }
+  ],
+  "response_metadata": [
+    {
+      "id": "call_LgxUsCgHP1KHy0YffLNpJr5c"
+    }
+  ],
+  "attempts": 1
+}

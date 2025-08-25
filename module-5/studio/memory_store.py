@@ -1,12 +1,13 @@
 from langchain_core.messages import SystemMessage
 from langchain_core.runnables.config import RunnableConfig
-from langchain_community.chat_models.tongyi import ChatTongyi
+from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph, MessagesState, START, END
 from langgraph.store.base import BaseStore
 import configuration
 
 # Initialize the LLM
-model = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0) 
+llm = ChatOpenAI(model="gpt-5-mini", temperature=0)
+sortllm = ChatOpenAI(model="gpt-5-nano", temperature=0)
 
 # Chatbot instruction
 MODEL_SYSTEM_MESSAGE = """You are a helpful assistant with memory that provides information about the user. 
@@ -61,7 +62,7 @@ def call_model(state: MessagesState, config: RunnableConfig, store: BaseStore):
     system_msg = MODEL_SYSTEM_MESSAGE.format(memory=existing_memory_content)
 
     # Respond using memory as well as the chat history
-    response = model.invoke([SystemMessage(content=system_msg)]+state["messages"])
+    response = llm.invoke([SystemMessage(content=system_msg)]+state["messages"])
 
     return {"messages": response}
 
@@ -88,7 +89,7 @@ def write_memory(state: MessagesState, config: RunnableConfig, store: BaseStore)
         
     # Format the memory in the system prompt
     system_msg = CREATE_MEMORY_INSTRUCTION.format(memory=existing_memory_content)
-    new_memory = model.invoke([SystemMessage(content=system_msg)]+state['messages'])
+    new_memory = sortllm.invoke([SystemMessage(content=system_msg)]+state['messages'])
 
     # Overwrite the existing memory in the store 
     key = "user_memory"

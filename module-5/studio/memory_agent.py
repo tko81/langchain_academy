@@ -11,7 +11,7 @@ from langchain_core.runnables import RunnableConfig
 from langchain_core.messages import merge_message_runs
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from langchain_community.chat_models.tongyi import ChatTongyi
+from langchain_openai import ChatOpenAI
 
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, MessagesState, START, END
@@ -125,11 +125,12 @@ class UpdateMemory(TypedDict):
     update_type: Literal['user', 'todo', 'instructions']
 
 # Initialize the model
-model = ChatTongyi(model="qwen3-coder-flash", streaming=True)model="qwen3-coder-flash", temperature=0)
+llm = ChatOpenAI(model="gpt-5-mini", temperature=0)
+sortllm = ChatOpenAI(model="gpt-5-nano", temperature=0)
 
 ## Create the Trustcall extractors for updating the user profile and ToDo list
 profile_extractor = create_extractor(
-    model,
+    sortllm,
     tools=[Profile],
     tool_choice="Profile",
 )
@@ -233,7 +234,7 @@ def task_mAIstro(state: MessagesState, config: RunnableConfig, store: BaseStore)
     system_msg = MODEL_SYSTEM_MESSAGE.format(user_profile=user_profile, todo=todo, instructions=instructions)
 
     # Respond using memory as well as the chat history
-    response = model.bind_tools([UpdateMemory], parallel_tool_calls=False).invoke([SystemMessage(content=system_msg)]+state["messages"])
+    response = llm.bind_tools([UpdateMemory], parallel_tool_calls=False).invoke([SystemMessage(content=system_msg)]+state["messages"])
 
     return {"messages": [response]}
 
@@ -308,7 +309,7 @@ def update_todos(state: MessagesState, config: RunnableConfig, store: BaseStore)
     
     # Create the Trustcall extractor for updating the ToDo list 
     todo_extractor = create_extractor(
-    model,
+    sortllm,
     tools=[ToDo],
     tool_choice=tool_name,
     enable_inserts=True
@@ -346,7 +347,7 @@ def update_instructions(state: MessagesState, config: RunnableConfig, store: Bas
         
     # Format the memory in the system prompt
     system_msg = CREATE_INSTRUCTIONS.format(current_instructions=existing_memory.value if existing_memory else None)
-    new_memory = model.invoke([SystemMessage(content=system_msg)]+state['messages'][:-1] + [HumanMessage(content="Please update the instructions based on the conversation")])
+    new_memory = llm.invoke([SystemMessage(content=system_msg)]+state['messages'][:-1] + [HumanMessage(content="Please update the instructions based on the conversation")])
 
     # Overwrite the existing memory in the store 
     key = "user_instructions"
